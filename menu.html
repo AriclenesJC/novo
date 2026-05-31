@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0d1223">
+    <title>Menu Digital</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="top-nav">
+        <a class="brand-link" href="index.html">Restaurante QR</a>
+        <div id="table-badge" style="color: #00ff94; font-weight: 600;">--</div>
+    </nav>
+    <header class="menu-header">
+        <div>
+            <p class="small-text">Menu digital</p>
+            <h1 class="menutitle">Escolha os produtos da sua mesa</h1>
+        </div>
+    </header>
+
+    <main class="menu-layout">
+        <section class="menu-catalogue">
+            <div class="search-bar">
+                <input type="search" placeholder="Pesquisar produtos" disabled>
+            </div>
+            <div class="product-grid">
+
+                <article class="product-card">                    
+                <div class="product-meta">
+                    <span>Entradas</span><strong>8050 kz</strong>
+                </div>
+                    <h3>Ceviche de salmão</h3>
+                    <p>Peixe fresco marinado com cebola e limão.</p>
+                </article>
+
+                <article class="product-card" >                    
+                    <div class="product-meta"><span>Entradas</span><strong>5090 kz</strong></div>
+                    <h3>Bruschetta clássica</h3>
+                    <p>Torrada crocante com tomate e manjericão.</p>
+                </article>
+
+
+                <article class="product-card" >                    
+                    <div class="product-meta"><span>Pratos principais</span><strong>16050 kz</strong></div>
+                    <h3>Bife acebolado</h3>
+                    <p>Bife suculento com cebolas caramelizadas.</p>
+                </article>
+
+
+                <article class="product-card">                    
+                    <div class="product-meta"><span>Pratos principais</span><strong>14020 kz</strong></div>
+                    <h3>Risoto de cogumelos</h3>
+                    <p>Risoto cremoso com cogumelos frescos.</p>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-meta"><span>Bebidas</span><strong>3,90 kz</strong></div>
+                    <h3>Limonada fresca</h3>
+                    <p>Limonada gelada preparada no momento.</p>
+                </article>
+
+
+                <article class="product-card">                    
+                    <div class="product-meta"><span>Bebidas</span><strong>4,40 kz</strong></div>
+                    <h3>Cerveja artesanal</h3>
+                    <p>Cerveja local servida gelada.</p>
+                </article>
+
+
+                <article class="product-card">                    
+                    <div class="product-meta"><span>Sobremesas</span><strong>6,30 kz</strong></div>
+                    <h3>Mousse de chocolate</h3>
+                    <p>Mousse leve com chocolate meio amargo.</p>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-meta"><span>Sobremesas</span><strong>5,80 kz</strong></div>
+                    <h3>Tarte de frutas</h3>
+                    <p>Tarte fresca com creme e frutas da estação.</p>
+                           
+                </article>
+            </div>
+        </section>
+
+        <aside class="cart-panel">
+            <div class="cart-header">
+                <h2>Carrinho</h2>
+                <p id="cart-count">0 itens</p>
+            </div>
+            <div class="cart-list" id="cart-list">
+            </div>
+            <div class="cart-summary" id="cart-summary">
+                <div><span>Total</span><strong id="cart-total">0,00 kz</strong></div>
+                <button id="checkout-btn" class="button button-primary">Fazer pedido</button>
+            </div>
+        </aside>
+    </main>
+    <script src="app.js" defer></script>
+</body>
+</html>

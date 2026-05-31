@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Restaurante</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle at top, rgba(0, 187, 255, 0.16), transparent 35%),
+                        radial-gradient(circle at bottom right, rgba(0, 255, 98, 0.14), transparent 30%),
+                        #0d1223;
+            color: #fff;
+            font-family: system-ui, sans-serif;
+        }
+
+        .login-card {
+            width: min(100%, 900px);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-radius: 20px;
+            overflow: hidden;
+            background: rgba(13, 18, 35, 0.88);
+            border: 1px solid rgba(0, 188, 255, 0.2);
+            box-shadow: 0 20px 60px rgba(0, 188, 255, 0.16), 0 0 80px rgba(0, 255, 98, 0.08);
+        }
+
+        .login-panel,
+        .login-form-wrapper {
+            padding: 60px 40px;
+        }
+
+        .login-panel {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            background: rgba(0, 0, 0, 0.08);
+        }
+
+        .login-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #00ff62, #00bbff);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .login-subtitle {
+            color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            max-width: 280px;
+        }
+
+        .decorative-line {
+            width: 160px;
+            height: 4px;
+            border-radius: 2px;
+            background: linear-gradient(135deg, #00ff623d, #00bbff);
+        }
+
+        .form-header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .form-header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .form-header p {
+            color: rgba(255, 255, 255, 0.75);
+            letter-spacing: 0.5px;
+        }
+
+        .input-group {
+            margin-bottom: 22px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .input-wrapper input {
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: 10px;
+            border: 2px solid rgba(0, 188, 255, 0.24);
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            font-size: 1rem;
+            transition: border-color 0.25s ease, background 0.25s ease;
+        }
+
+        .input-wrapper input::placeholder {
+            color: rgba(255, 255, 255, 0.45);
+        }
+
+        .input-wrapper input:focus {
+            outline: none;
+            border-color: #00bbff;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .form-options {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 25px;
+        }
+
+        .forgot-password {
+            color: #00bbff;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            background: linear-gradient(135deg, #001a4d, #003d99);
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            box-shadow: 0 8px 20px rgba(0, 24, 53, 0.2);
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .login-btn:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, #003d99, #0057cc);
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 22px;
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 0.9rem;
+        }
+
+        .form-footer a {
+            color: #00bbff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 900px) {
+            .login-card {
+                grid-template-columns: 1fr;
+            }
+            .login-panel,
+            .login-form-wrapper {
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .login-card {
+                border-radius: 15px;
+            }
+            .login-title {
+                font-size: 2rem;
+            }
+            .form-header h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body class="login-page">
+
+    <div class="login-card">
+    <div class="login-panel">
+    <div class="panel-content">
+        <a href="index.html" style="text-decoration: none;">        <p class="login-subtitle">Bem-vindo ao Restaurante QR</p>
+<h1 class="login-title">Restaurante QR</h1></a>
+        <div class="decorative-line"></div>
+    </div>
+    </div>
+
+
+    <div class="login-form-wrapper">
+        <form action="index.html" method="POST">
+    <div class="form-header">
+        <h2>Entrar</h2>
+        <p>Aceda à sua conta</p>
+    </div>
+    <div class="input-group">
+        <label for="username">Nome de Utilizador</label>
+    <div class="input-wrapper">
+        <input type="text" id="username" name="username" placeholder="Digite seu nome" required>
+    </div>
+    </div>            
+    
+    
+    <div class="input-group">
+    <label for="password">Senha</label>
+    <div class="input-wrapper">
+    <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+    </div>
+    </div>
+
+
+    <div class="form-options">
+        <a href="#" class="forgot-password">Esqueci a senha</a>
+    </div>
+        <button type="submit" class="login-btn">Entrar Agora</button>
+    <div class="form-footer">
+        <p>Não tem conta? <a href="#register">Criar conta</a></p>
+    </div>
+    </form>
+        </div>
+    </div>
+
+</body>
+</html>

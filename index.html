@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante QR</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="top-nav">
+        <a class="brand-link" href="index.html">Restaurante QR</a>
+        <div class="nav-actions">
+            <a class="button button-secondary" href="menu.html">Ver menu</a>
+            <a class="button button-primary" href="qr.html">Gerar QR</a>
+            <a class="button button" href="login.html">Login</a>
+        </div>
+    </nav>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Acessa ao menu apenas por QR</h1>
+            <p>Gere um QR Code para a mesa e abra o menu interativo sem precisar de aplicativo.</p>
+
+        </div>
+    </header>
+
+    <main class="page-grid">
+        <section class="card">
+            <h2>Como funciona</h2>
+            <ol>
+                <li>Escolha a mesa e gere o QR Code.</li>
+                <li>O cliente escaneia com a câmara do telemóvel.</li>
+                <li>O menu abre automaticamente.</li>
+            </ol>
+        </section>
+
+        <section class="card">
+            <h2>Vantagens</h2>
+            <ul>
+                <li>Sem contacto físico.</li>
+                <li>Menu sempre disponível.</li>
+                <li>Pedido rápido e visual.</li>
+                <li>Sem a necessidade de chamar garçon.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Gerar QR para mesa</h2>
+            <p>Para simplicidade esta versão não gera QR automaticamente. Pode usar um gerador de QR online rápido (ex: <a href="https://www.qr-code-generator.com/" target="_blank">qr-code-generator.com</a>) e apontar para o link do menu abaixo.</p>
+            <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;">
+                <a class="button button-primary" href="qr.html">Instruções para QR</a>
+                <a class="button button-secondary" href="menu.html">Ver menu</a>
+            </div>
+        </section>
+
+    </main>
+</main>
+
+    <footer class="site-footer">
+        <div class="page-grid" style="padding:18px;">
+            <small>Este Sistema foi criado para diminuir as tarefas do garçon e para ajudar aos clientes a fazer compras de forma simples e rápida </small>
+        </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+
+</body>
+</html>
